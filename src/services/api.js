@@ -575,7 +575,7 @@ export async function createSubscription(values, file, selectedPackage) {
   // 5. إرسال البيانات إلى Edge Function
   // بدل الإدخال المباشر في جدول subscriptions
   const { data, error } = await supabase.functions.invoke(
-    'create-subscription',
+    'quick-endpoint',
     {
       body: payload,
     }

@@ -401,7 +401,7 @@ Deno.serve(async (req) => {
 
   } catch (error) {
     console.error(
-      'create-subscription error:',
+      'quick-endpoint error:',
       error
     );
 
