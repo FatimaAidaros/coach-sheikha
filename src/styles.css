@@ -4993,3 +4993,319 @@ footer.site-footer {
   font-size: 15px;
   line-height: 1.8;
 }
+/* =========================================================
+   MOBILE FIX - COACH SHEIKHA
+   ========================================================= */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+/* =========================================================
+   PUBLIC PAGE WIDTH
+   ========================================================= */
+
+main {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.section {
+  width: 100%;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* =========================================================
+   SUBSCRIPTION PAGE
+   ========================================================= */
+
+.subscription.reference-subscription {
+  width: calc(100% - 40px);
+  max-width: 900px;
+  margin: 0 auto 70px;
+  padding: 40px;
+  border-radius: 24px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.subscription.reference-subscription > * {
+  max-width: 100%;
+}
+
+
+/* العناوين */
+
+.subscription.reference-subscription h2 {
+  width: 100%;
+  margin: 30px 0 18px;
+  text-align: right;
+}
+
+
+/* =========================================================
+   PERSONAL FIELDS
+   ========================================================= */
+
+.subscription.reference-subscription .ref-fields {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.subscription.reference-subscription .ref-fields label {
+  width: 100%;
+  min-width: 0;
+}
+
+.subscription.reference-subscription input,
+.subscription.reference-subscription select,
+.subscription.reference-subscription textarea {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PACKAGES
+   ========================================================= */
+
+.subscription.reference-subscription .package-pick {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.subscription.reference-subscription .package-pick-btn {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BANK ACCOUNTS
+   ========================================================= */
+
+.subscription.reference-subscription .bank-list {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.subscription.reference-subscription .bank-card {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.subscription.reference-subscription .bank-info {
+  min-width: 0;
+  flex: 1;
+  overflow: hidden;
+}
+
+.subscription.reference-subscription .bank-info b,
+.subscription.reference-subscription .bank-info small,
+.subscription.reference-subscription .bank-info span,
+.subscription.reference-subscription .bank-info strong {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.subscription.reference-subscription .bank-info strong {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.subscription.reference-subscription .copy-btn {
+  flex: 0 0 auto;
+}
+
+
+/* =========================================================
+   UPLOAD
+   ========================================================= */
+
+.subscription.reference-subscription .upload {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.subscription.reference-subscription .upload b {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+
+/* =========================================================
+   WARNING / NOTICE
+   ========================================================= */
+
+.subscription.reference-subscription .health-warning,
+.subscription.reference-subscription .notice,
+.subscription.reference-subscription .form-status,
+.subscription.reference-subscription .privacy {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+.subscription.reference-subscription .submit {
+  width: 100%;
+  max-width: 100%;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+  .subscription.reference-subscription {
+    width: calc(100% - 24px);
+    max-width: none;
+
+    margin: 0 auto 45px;
+
+    padding: 24px 16px;
+
+    border-radius: 18px;
+  }
+
+  .subscription.reference-subscription h2 {
+    font-size: 18px;
+    margin: 26px 0 14px;
+  }
+
+  .subscription.reference-subscription .ref-fields {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .subscription.reference-subscription .package-pick {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .subscription.reference-subscription .package-pick-btn {
+    min-height: 75px;
+  }
+
+  .subscription.reference-subscription .bank-card {
+    padding: 14px;
+    gap: 10px;
+  }
+
+  .subscription.reference-subscription .bank-icon {
+    flex: 0 0 auto;
+    width: 22px;
+    height: 22px;
+  }
+
+  .subscription.reference-subscription .bank-info {
+    flex: 1 1 auto;
+    width: 0;
+  }
+
+  .subscription.reference-subscription .copy-btn {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    flex: 0 0 38px;
+  }
+
+  .subscription.reference-subscription input,
+  .subscription.reference-subscription select {
+    min-height: 48px;
+    font-size: 16px;
+  }
+
+  .subscription.reference-subscription textarea {
+    font-size: 16px;
+  }
+
+  .subscription.reference-subscription .upload {
+    padding: 24px 14px;
+  }
+
+  .signup-title {
+    width: calc(100% - 32px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .signup-title h1 {
+    font-size: 28px;
+  }
+
+  .signup-title p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .subscription.reference-subscription {
+    width: calc(100% - 16px);
+    padding: 20px 12px;
+  }
+
+  .subscription.reference-subscription .bank-card {
+    padding: 11px;
+  }
+
+  .subscription.reference-subscription .bank-info b {
+    font-size: 13px;
+  }
+
+  .subscription.reference-subscription .bank-info strong {
+    font-size: 12px;
+  }
+}

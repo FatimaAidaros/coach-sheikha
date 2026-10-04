@@ -10,7 +10,7 @@ import {
   getTestimonials,
  
 } from '../../services/api';
-
+import TestimonialsSlider from "../../components/TestimonialsSlider";
 function AnimatedCounter({ end, duration = 800 }) {
   const target = Number(end) || 0;
   const [count, setCount] = useState(target);
@@ -347,39 +347,16 @@ const ctaButton = cta.button_text || '';
 
       {/* 6. Success Stories / Testimonials with Slider */}
       <section className="testimonials-section">
-<div className="testimonials-heading">
-            <h2>قصص نجاح ملهمة</h2>
-          <p>
+  <div className="testimonials-heading">
+    <h2>قصص نجاح ملهمة</h2>
+
+    <p>
       تجارب حقيقية لمشتركات بدأن رحلتهن نحو حياة صحية أكثر توازنًا، وحققن نتائج نفتخر بها.
     </p>
-          <Slider
-            items={testimonials}
-  desktopItems={3}
-  tabletItems={2}
-  mobileItems={1}
-  renderItem={(t) => (
-              <article className="testimonial-card" key={t.id}>
-                <p className="testimonial-quote">{t.content}</p>
-                <hr className="testimonial-divider" />
-                <div className="testimonial-footer-row">
-                  <div className="testimonial-avatar">
-                    {t.image_url ? (
-                      <img src={t.image_url} alt={t.name} />
-                    ) : (
-                      <span>{t.name ? t.name.charAt(0) : 'م'}</span>
-                    )}
-                  </div>
-                  <div className="testimonial-info">
-                    <b>{t.name}</b>
-                    {/* <small>{t.tag || 'مشتركة نشيطة'}</small> */}
-                    <div className="testimonial-stars">{t.rating || '★★★★★'}</div>
-                  </div>
-                </div>
-              </article>
-            )}
-          />
-        </div>
-      </section>
+
+    <TestimonialsSlider items={testimonials} />
+  </div>
+</section>
 
       {/* 7. CTA Section */}
      <section className="cta-wrapper">

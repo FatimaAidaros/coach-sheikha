@@ -8,7 +8,8 @@ export default function Slider({
   tabletItems = 2,
   mobileItems = 1,
   gap = 20,
-  className = ''
+  className = '',
+  isTestimonials = false
 }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleCount, setVisibleCount] = useState(desktopItems);
@@ -155,15 +156,15 @@ export default function Slider({
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
         >
-         <div
+       <div
   className="slider-track"
   style={{
     display: 'flex',
     flexWrap: 'nowrap',
     gap: `${gap}px`,
-    transform: `translateX(-${
-      currentIndex * (100 / visibleCount)
-    }%)`,
+    transform: isTestimonials
+      ? `translateX(-${translateX}px)`
+      : `translateX(-${currentIndex * (100 / visibleCount)}%)`,
     transition:
       'transform 0.4s cubic-bezier(0.25, 1, 0.5, 1)'
   }}
