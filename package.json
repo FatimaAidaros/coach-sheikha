@@ -1,0 +1,30 @@
+{
+  "name": "coach-sheikha",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "supabase:start": "supabase start",
+    "supabase:stop": "supabase stop",
+    "supabase:status": "supabase status",
+    "supabase:reset": "supabase db reset"
+  },
+  "dependencies": {
+    "@depup/exceljs": "^4.4.0-depup.0",
+    "@marsidev/react-turnstile": "^1.6.1",
+    "@supabase/supabase-js": "^2.49.4",
+    "browser-image-compression": "^2.0.2",
+    "lucide-react": "^0.468.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.1.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "supabase": "^2.117.0",
+    "vite": "^6.0.5"
+  }
+}
