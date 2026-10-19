@@ -5767,148 +5767,38 @@ article,
     font-size: 17px;
   }
 }
-
-/* Header - Admin Subscriptions */
-.admin-subscriptions-page .admin-page-header-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 20px;
-  flex-wrap: wrap;
-  min-width: 0;
-}
-
-.admin-subscriptions-page .admin-page-header-title {
-  flex: 1 1 260px;
-  min-width: 0;
-}
-
-.admin-subscriptions-page .admin-page-header-title h1 {
-  overflow-wrap: anywhere;
-}
-
-.admin-subscriptions-page .admin-page-header-title p {
-  overflow-wrap: anywhere;
-}
-
-.admin-subscriptions-page .admin-page-header-actions {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex: 1 1 100%;
-  flex-wrap: wrap;
-  gap: 12px;
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
-  white-space: normal;
-  box-sizing: border-box;
-}
-
-.admin-subscriptions-page .registration-switch-box {
-  display: flex;
-  align-items: center;
-  flex: 0 1 auto;
-  flex-wrap: wrap;
-  gap: 10px;
-  max-width: 100%;
-  min-width: 0;
-  box-sizing: border-box;
-}
-
-.admin-subscriptions-page .registration-status {
-  font-size: 13px;
-  font-weight: 700;
-  overflow-wrap: anywhere;
-}
-
-.admin-subscriptions-page .registration-toggle {
-  direction: ltr;
-  position: relative;
-  flex: 0 0 48px;
-  width: 48px;
-  height: 26px;
-  border-radius: 26px;
-  border: 2px solid;
-  padding: 0;
-  cursor: pointer;
-  transition: background-color 0.25s ease,
-    border-color 0.25s ease;
-}
-
-.admin-subscriptions-page .registration-toggle.is-open {
-  background: #10b981;
-  border-color: #059669;
-}
-
-.admin-subscriptions-page .registration-toggle.is-closed {
-  background: #e2e8f0;
-  border-color: #cbd5e1;
-}
-
-.admin-subscriptions-page .registration-toggle-knob {
-  position: absolute;
-  top: 2px;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: #fff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
-  transition: left 0.25s ease;
-}
-
-.admin-subscriptions-page .registration-toggle-knob.is-open {
-  left: 24px;
-}
-
-.admin-subscriptions-page .registration-toggle-knob.is-closed {
-  left: 2px;
-}
-
-.admin-subscriptions-page .admin-page-header-actions > button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  flex: 0 1 auto;
-  min-width: 0;
-  max-width: 100%;
-  white-space: normal;
-  box-sizing: border-box;
-}
-
-@media (max-width: 600px) {
-  .admin-subscriptions-page .admin-page-header-row {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 14px;
+@media (max-width: 767px) {
+  .slider-dots {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
   }
 
-  .admin-subscriptions-page .admin-page-header-title,
-  .admin-subscriptions-page .admin-page-header-actions {
-    width: 100%;
-    max-width: 100%;
+  .slider-dots .slider-dot {
+    flex: 0 0 8px;
+    width: 8px;
+    min-width: 8px;
+    max-width: 8px;
+    height: 8px;
+    min-height: 8px;
+    max-height: 8px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    writing-mode: horizontal-tb;
+    transform: none;
   }
 
-  .admin-subscriptions-page .admin-page-header-actions {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 10px;
-  }
-
-  .admin-subscriptions-page .registration-switch-box {
-    width: 100%;
-    justify-content: space-between;
-    border-radius: 14px;
-    padding: 10px;
-  }
-
-  .admin-subscriptions-page .registration-status {
-    min-width: 0;
-  }
-
-  .admin-subscriptions-page .admin-page-header-actions > button {
-    width: 100%;
-    min-height: 44px;
+  .slider-dots .slider-dot.active {
+    flex-basis: 22px;
+    width: 22px;
+    min-width: 22px;
+    max-width: 22px;
+    height: 8px;
+    min-height: 8px;
+    max-height: 8px;
+    border-radius: 8px;
   }
 }
