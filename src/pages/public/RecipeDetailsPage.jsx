@@ -45,7 +45,7 @@ export default function RecipeDetailsPage() {
   if (error || !recipe) {
     return (
       <PublicLayout>
-        <div className="section centered" style={{ padding: '80px 20px' }}>
+        <div className="section centered" style={{ padding: '0px 0px' }}>
           <AlertCircle size={48} color="var(--brown)" />
           <h2 style={{ margin: '16px 0' }}>{error || 'الوصفة غير موجودة'}</h2>
           <p style={{ color: '#745b48', marginBottom: '24px' }}>

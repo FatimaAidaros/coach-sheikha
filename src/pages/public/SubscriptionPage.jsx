@@ -449,85 +449,76 @@ export default function SubscriptionPage() {
           {/* Personal Details */}
           {/* ========================= */}
 
-          <h2>
-            المعلومات الشخصية
-          </h2>
+                
+       
+<h2>المعلومات الشخصية</h2>
 
-          <div className="fields ref-fields">
+<div className="fields ref-fields">
+  <label>
+    <span className="field-label">
+      الاسم الكامل
+    </span>
+    <input
+      name="full_name"
+      required
+      placeholder="مثال: سارة محمد"
+      disabled={loading}
+    />
+  </label>
 
-            {/* Full Name */}
-            <label>
-              الاسم الكامل{' '}
-              <span className="req">*</span>
+  <label>
+    <span className="field-label">
+      رقم الجوال (WhatsApp)
+    </span>
+    <input
+      name="phone"
+      type="tel"
+      required
+      inputMode="tel"
+      placeholder="05xxxxxxxx أو +966..."
+      disabled={loading}
+    />
+  </label>
 
-              <input
-                name="full_name"
-                required
-                placeholder="مثال: سارة محمد"
-                disabled={loading}
-              />
-            </label>
+  <label>
+    <span className="field-label">
+      العمر
+    </span>
+    <input
+      type="number"
+      name="age"
+      required
+      min="12"
+      max="100"
+      placeholder="25"
+      disabled={loading}
+    />
+  </label>
 
-            {/* Phone */}
-            <label>
-              رقم الجوال (WhatsApp){' '}
-              <span className="req">*</span>
+  <label className="goal-field">
+    <span className="field-label">
+      هدفك من الاشتراك
+    </span>
 
-              <input
-                name="phone"
-                type="tel"
-                required
-                inputMode="tel"
-                placeholder="05xxxxxxxx أو +966..."
-                disabled={loading}
-              />
-            </label>
+    <select
+      name="goal"
+      required
+      value={goal}
+      onChange={e => setGoal(e.target.value)}
+      disabled={loading}
+    >
+      <option value="">اختاري هدفك</option>
+      <option value="خسارة الوزن">خسارة الوزن</option>
+      <option value="التنشيف">التنشيف</option>
+      <option value="التضخيم">التضخيم</option>
+      <option value="المحافظة على الوزن">المحافظة على الوزن</option>
+      <option value="تحسين العادات الغذائية">تحسين العادات الغذائية</option>
+      <option value="تحسين الصحة واللياقة">تحسين الصحة واللياقة</option>
+      <option value="هدف آخر">هدف آخر</option>
+    </select>
+  </label>
+</div>
 
-            {/* Age */}
-            <label>
-              العمر{' '}
-              <span className="req">*</span>
-
-              <input
-                type="number"
-                name="age"
-                required
-                min="12"
-                max="100"
-                placeholder="25"
-                disabled={loading}
-              />
-            </label>
-
-            {/* Goal */}
-            <label className="goal-field">
-              هدفك من الاشتراك <span className="req">*</span>
-
-              <select
-                name="goal"
-                required
-                value={goal}
-                onChange={e => setGoal(e.target.value)}
-                disabled={loading}
-              >
-                <option value="">اختاري هدفك</option>
-                <option value="خسارة الوزن">خسارة الوزن</option>
-                <option value="التنشيف">التنشيف</option>
-                <option value="التضخيم">التضخيم</option>
-                <option value="المحافظة على الوزن">
-                  المحافظة على الوزن
-                </option>
-                <option value="تحسين العادات الغذائية">
-                  تحسين العادات الغذائية
-                </option>
-                <option value="تحسين الصحة واللياقة">
-                  تحسين الصحة واللياقة
-                </option>
-                <option value="هدف آخر">هدف آخر</option>
-              </select>
-            </label>
-
-          </div>
 
           {/* ========================= */}
           {/* Package Selector */}
@@ -639,7 +630,7 @@ export default function SubscriptionPage() {
             <p>
               لا يتم استقبال المشاكل الصحية التي
               تحتاج إشراف دكتور بشكل دوري مثل
-              (السكري، الديدان، لخبطة الهرمونات،
+              (السكري، الديدان، مشاكل الهرمونات،
               أمراض المعدة الحادة، مشاكل الغدة
               الدرقية، أمراض القلب، أمراض الكبد،
               الفشل الكلوي، سوء التغذية الحاد الذي
